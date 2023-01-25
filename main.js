@@ -150,19 +150,18 @@ document.getElementById("submit").onclick = () => {
 
     // adds grays from Wordle letters
     for (let i = 1; i <= 5; i++) {
-        if (document.getElementById(`letter${i}Color`).value == 0 && !grays.includes(document.getElementById(`letter${i}`).value)) {
+        if (document.getElementById(`letter${i}Color`).value == 0 && !grays.includes(document.getElementById(`letter${i}`).value) && document.getElementById(`letter${i}`).value) {
             grays.push(document.getElementById(`letter${i}`).value);
         }
     };
 
     // removes possibilities with gray letters
     // TO-DO: Why is this removing everything from possibilities?
-    grays.forEach(gray => { // BROKEN
+    grays.forEach(gray => {
         possibilities = possibilities.filter(possibility => {
             return !possibility.includes(gray);
         });
     });
-    document.getElementsByTagName("H1")[0].innerHTML += possibilities.toString();
 
     // display possibilities
     document.getElementById("results").innerHTML = "";
