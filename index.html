@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wordle Help</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- SEO Description-->
+	<meta name="description" content="Narrow down the potential words usable with your current Wordle round.">
+	<link rel="canonical" href="https://lucaswselby.github.io/wordlehelp">
+
+	<!-- Favicon -->
+	<link rel="icon" href="./wordle-favicon.png" type="image/x-icon">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Wordle Help</h1>
+    </header>
+
+    <main>
+        <div id="wordleLetters">
+            <div class="switchBox">
+                <label for="letter1Color">Gray&nbsp;Yellow&nbsp;Green</label>
+                <input id="letter1Color" type="range" min="0" max="2" value="0">
+                <input type="text" class="wordleLetter" id="letter1" name="letter1" maxlength="1" pattern="[A-Za-z]">
+            </div>
+            <div class="switchBox">
+                <label for="letter2Color">Gray&nbsp;Yellow&nbsp;Green</label>
+                <input id="letter2Color" type="range" min="0" max="2" value="0">
+                <input type="text" class="wordleLetter" id="letter2" name="letter2" maxlength="1" pattern="[A-Za-z]">
+            </div>
+            <div class="switchBox">
+                <label for="letter3Color">Gray&nbsp;Yellow&nbsp;Green</label>
+                <input id="letter3Color" type="range" min="0" max="2" value="0">
+                <input type="text" class="wordleLetter" id="letter3" name="letter3" maxlength="1" pattern="[A-Za-z]">
+            </div>
+            <div class="switchBox">
+                <label for="letter4Color">Gray&nbsp;Yellow&nbsp;Green</label>
+                <input id="letter4Color" type="range" min="0" max="2" value="0">
+                <input type="text" class="wordleLetter" id="letter4" name="letter4" maxlength="1" pattern="[A-Za-z]">
+            </div>
+            <div class="switchBox">
+                <label for="letter5Color">Gray&nbsp;Yellow&nbsp;Green</label>
+                <input id="letter5Color" type="range" min="0" max="2" value="0">
+                <input type="text" class="wordleLetter" id="letter5" name="letter5" maxlength="1" pattern="[A-Za-z]">
+            </div>
+        </div>
+        <div class="buttonContainer"><input type="button" id="submit" value="Submit"></div>
+        <div class="buttonContainer"><input type="button" id="reset" value="Reset"></div>
+        
+        <div id="keyboard">
+            <div class="keyboardRow">
+                <div id="Q" class="keyboardLetter"><p>Q</p></div>
+                <div id="W" class="keyboardLetter"><p>W</p></div>
+                <div id="E" class="keyboardLetter"><p>E</p></div>
+                <div id="R" class="keyboardLetter"><p>R</p></div>
+                <div id="T" class="keyboardLetter"><p>T</p></div>
+                <div id="Y" class="keyboardLetter"><p>Y</p></div>
+                <div id="U" class="keyboardLetter"><p>U</p></div>
+                <div id="I" class="keyboardLetter"><p>I</p></div>
+                <div id="O" class="keyboardLetter"><p>O</p></div>
+                <div id="P" class="keyboardLetter"><p>P</p></div>                
+            </div>
+            <div class="keyboardRow">
+                <div id="A" class="keyboardLetter"><p>A</p></div>
+                <div id="S" class="keyboardLetter"><p>S</p></div>
+                <div id="D" class="keyboardLetter"><p>D</p></div>
+                <div id="F" class="keyboardLetter"><p>F</p></div>
+                <div id="G" class="keyboardLetter"><p>G</p></div>
+                <div id="H" class="keyboardLetter"><p>H</p></div>
+                <div id="J" class="keyboardLetter"><p>J</p></div>
+                <div id="K" class="keyboardLetter"><p>K</p></div>
+                <div id="L" class="keyboardLetter"><p>L</p></div>
+            </div>
+            <div class="keyboardRow">
+                <div id="Z" class="keyboardLetter"><p>Z</div>
+                <div id="X" class="keyboardLetter"><p>X</div>
+                <div id="C" class="keyboardLetter"><p>C</div>
+                <div id="V" class="keyboardLetter"><p>V</div>
+                <div id="B" class="keyboardLetter"><p>B</div>
+                <div id="N" class="keyboardLetter"><p>N</div>
+                <div id="M" class="keyboardLetter"><p>M</div>
+            </div>
+        </div>
+
+        <ul id="results"></ul>
+    </main>
+    
+    <footer>
+        This is an open source application: <a href="https://github.com/lucaswselby/wordlehelp" aria-label="GitHub link for Wordle Help files" target="_blank">github.com/lucaswselby/wordlehelp</a>
+    </footer>
+</body>
+
+<script type="text/javascript" src=".\main.js"></script>
+</html>
