@@ -161,6 +161,7 @@ document.getElementById("submit").onclick = () => {
             return !possibility.includes(gray);
         });
     });
+    grays = [];
 
     // display possibilities
     document.getElementById("results").innerHTML = "";
