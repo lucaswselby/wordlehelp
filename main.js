@@ -1,16 +1,15 @@
 for (let i = 1; i <= 5; i++) {
-
-    // typing in the wordle answer changes the keyboard
     document.getElementById(`letter${i}`).oninput = () => {
 
         // makes the value capitalized
         document.getElementById(`letter${i}`).value = document.getElementById(`letter${i}`).value.toUpperCase();
         
         // focus on next letter in the wordle answer
-        if (document.getElementById(`letter${i}`).value) {
-            if (i < 5) {
-                document.getElementById(`letter${i + 1}`).select();
-            }
+        if (document.getElementById(`letter${i}`).value && i < 5) {
+            document.getElementById(`letter${i + 1}`).select();
+        }
+        else if (!document.getElementById(`letter${i}`).value && i > 1) {
+            document.getElementById(`letter${i - 1}`).select();
         }
 
         // hides keyboards letters if they're in the wordle answer
