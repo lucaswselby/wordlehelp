@@ -186,4 +186,5 @@ document.getElementById("reset").onclick = () => {
         document.getElementById(letter).style.visibility = "visible";
         document.getElementById(letter).style.backgroundColor = "white";
     });
+    document.getElementById("results").innerHTML = "";
 };

@@ -1,3 +1,10 @@
+:root {
+    --wordle-gray: #787C7E;
+    --wordle-yellow: #C9B458;
+    --wordle-green: #6AAA64;
+    --labelSquareLength: 20px;
+}
+
 html {
     height: 100%;
 }
@@ -37,6 +44,30 @@ input[type="text"] {
     flex-flow: column nowrap;
     align-items: center;
 }
+.switchBox input[type="range"] {    
+    width: calc(var(--labelSquareLength) * 5);
+}
+.switchBox label {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: calc(var(--labelSquareLength) * 5);
+}
+.graySquare {    
+    height: var(--labelSquareLength);
+    width: var(--labelSquareLength);
+    background-color: var(--wordle-gray);
+}
+.yellowSquare {    
+    height: var(--labelSquareLength);
+    width: var(--labelSquareLength);
+    background-color: var(--wordle-yellow);
+}
+.greenSquare {    
+    height: var(--labelSquareLength);
+    width: var(--labelSquareLength);
+    background-color: var(--wordle-green);
+}
 
 #wordleLetters {
     display: flex;
@@ -45,9 +76,9 @@ input[type="text"] {
     height: 30vh;
 }
 .wordleLetter {
-    height: 1.5em;
-    width: 1.5em;
-    background-color: #787C7E;
+    height: calc(var(--labelSquareLength) * 7);
+    width: calc(var(--labelSquareLength) * 7);
+    background-color: var(--wordle-gray);
 }
 
 .buttonContainer {
@@ -75,7 +106,28 @@ input[type="text"] {
     border: 2px solid black;
     margin: 2px;
     text-align: center;
-    aspect-ratio: 1 / 1;
     height: 3em;
+    width: 3em;
     vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --labelSquareLength: 2.5vw;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    input[type="text"] {
+        font-size: 60px;
+    }
+
+    #wordleLetters {
+        width: 100%;
+    }
+    .switchBox {
+        margin: 0;
+    }
 }
