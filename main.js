@@ -23,6 +23,14 @@ for (let i = 1; i <= 5; i++) {
         }
     };
 
+    // backspace in the wordle answer focuses on the previous letter
+    // https://www.geeksforgeeks.org/ways-to-capture-the-backspace-and-delete-on-the-onkeydown-event/
+    document.getElementById(`letter${i}`).onkeyup = event => {
+        if (event.key === "Backspace" && !document.getElementById(`letter${i}`).value && i > 1) {
+            document.getElementById(`letter${i - 1}`).select();
+        }
+    }
+
     // change wordle letter color
     document.getElementById(`letter${i}Color`).onchange = () => {
         if (document.getElementById(`letter${i}Color`).value == 0) {
