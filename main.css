@@ -2,7 +2,8 @@
     --wordle-gray: #787C7E;
     --wordle-yellow: #C9B458;
     --wordle-green: #6AAA64;
-    --labelSquareLength: 20px;
+    --labelSquareLength: 2.5vw;
+    --maxLabelSquareLength: 20px;
 }
 
 html {
@@ -46,26 +47,34 @@ input[type="text"] {
 }
 .switchBox input[type="range"] {    
     width: calc(var(--labelSquareLength) * 5);
+    max-width: calc(var(--maxLabelSquareLength) * 5)
 }
 .switchBox label {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     width: calc(var(--labelSquareLength) * 5);
+    max-width: calc(var(--maxLabelSquareLength) * 5);
 }
 .graySquare {    
     height: var(--labelSquareLength);
     width: var(--labelSquareLength);
+    max-height: var(--maxLabelSquareLength);
+    max-width: var(--maxLabelSquareLength);
     background-color: var(--wordle-gray);
 }
 .yellowSquare {    
     height: var(--labelSquareLength);
     width: var(--labelSquareLength);
+    max-height: var(--maxLabelSquareLength);
+    max-width: var(--maxLabelSquareLength);
     background-color: var(--wordle-yellow);
 }
 .greenSquare {    
     height: var(--labelSquareLength);
     width: var(--labelSquareLength);
+    max-height: var(--maxLabelSquareLength);
+    max-width: var(--maxLabelSquareLength);
     background-color: var(--wordle-green);
 }
 
@@ -78,6 +87,8 @@ input[type="text"] {
 .wordleLetter {
     height: calc(var(--labelSquareLength) * 7);
     width: calc(var(--labelSquareLength) * 7);
+    max-height: calc(var(--maxLabelSquareLength) * 7);
+    max-width: calc(var(--maxLabelSquareLength) * 7);
     background-color: var(--wordle-gray);
 }
 
@@ -112,10 +123,6 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 600px) {
-    :root {
-        --labelSquareLength: 2.5vw;
-    }
-
     footer {
         position: relative;
     }
