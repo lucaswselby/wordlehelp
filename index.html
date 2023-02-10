@@ -17,60 +17,219 @@
 </head>
 
 <body>
-    <header>
-        <h1>Wordle Help</h1>
-    </header>
-
     <main>
-        <div id="wordleLetters">
-            <div class="switchBox">
-                <label for="letter1Color">
-                    <div class="graySquare" title="Gray"></div>
-                    <div class="yellowSquare" title="Yellow"></div>
-                    <div class="greenSquare" title="Green"></div>
-                </label>
-                <input id="letter1Color" type="range" min="0" max="2" value="0">
-                <input type="text" class="wordleLetter" id="letter1" name="letter1" maxlength="1" pattern="[A-Za-z]">
+        <div id="wordleLetterWrappers">
+            <div class="wordleRow">
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter one"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter two"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter three"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter four"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter five"></div>
+                </div>
             </div>
-            <div class="switchBox">
-                <label for="letter2Color">
-                    <div class="graySquare" title="Gray"></div>
-                    <div class="yellowSquare" title="Yellow"></div>
-                    <div class="greenSquare" title="Green"></div>
-                </label>
-                <input id="letter2Color" type="range" min="0" max="2" value="0">
-                <input type="text" class="wordleLetter" id="letter2" name="letter2" maxlength="1" pattern="[A-Za-z]">
+            <div class="wordleRow">
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter one"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter two"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter three"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter four"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter five"></div>
+                </div>
             </div>
-            <div class="switchBox">
-                <label for="letter3Color">
-                    <div class="graySquare" title="Gray"></div>
-                    <div class="yellowSquare" title="Yellow"></div>
-                    <div class="greenSquare" title="Green"></div>
-                </label>
-                <input id="letter3Color" type="range" min="0" max="2" value="0">
-                <input type="text" class="wordleLetter" id="letter3" name="letter3" maxlength="1" pattern="[A-Za-z]">
+            <div class="wordleRow">
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter one"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter two"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter three"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter four"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter five"></div>
+                </div>
             </div>
-            <div class="switchBox">
-                <label for="letter4Color">
-                    <div class="graySquare" title="Gray"></div>
-                    <div class="yellowSquare" title="Yellow"></div>
-                    <div class="greenSquare" title="Green"></div>
-                </label>
-                <input id="letter4Color" type="range" min="0" max="2" value="0">
-                <input type="text" class="wordleLetter" id="letter4" name="letter4" maxlength="1" pattern="[A-Za-z]">
+            <div class="wordleRow">
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter one"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter two"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter three"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter four"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter five"></div>
+                </div>
             </div>
-            <div class="switchBox">
-                <label for="letter5Color">
-                    <div class="graySquare" title="Gray"></div>
-                    <div class="yellowSquare" title="Yellow"></div>
-                    <div class="greenSquare" title="Green"></div>
-                </label>
-                <input id="letter5Color" type="range" min="0" max="2" value="0">
-                <input type="text" class="wordleLetter" id="letter5" name="letter5" maxlength="1" pattern="[A-Za-z]">
+            <div class="wordleRow">
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter one"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter two"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter three"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter four"></div>
+                </div>
+                <div class="wordleLetterWrapper">
+                    <div class="colors">
+                        <div class="graySquare" title="Gray"></div>
+                        <div class="yellowSquare" title="Yellow"></div>
+                        <div class="greenSquare" title="Green"></div>
+                    </div>
+                    <div class="wordleLetter five"></div>
+                </div>
             </div>
         </div>
-        <div class="buttonContainer"><input type="button" id="submit" value="Submit"></div>
-        <div class="buttonContainer"><input type="button" id="reset" value="Reset"></div>
         
         <div id="keyboard">
             <div class="keyboardRow">
@@ -97,13 +256,18 @@
                 <div id="L" class="keyboardLetter"><p>L</p></div>
             </div>
             <div class="keyboardRow">
-                <div id="Z" class="keyboardLetter"><p>Z</div>
-                <div id="X" class="keyboardLetter"><p>X</div>
-                <div id="C" class="keyboardLetter"><p>C</div>
-                <div id="V" class="keyboardLetter"><p>V</div>
-                <div id="B" class="keyboardLetter"><p>B</div>
-                <div id="N" class="keyboardLetter"><p>N</div>
-                <div id="M" class="keyboardLetter"><p>M</div>
+                <div id="enter" class="keyboardLetter"><p>ENTER</p></div>
+                <div id="Z" class="keyboardLetter"><p>Z</p></div>
+                <div id="X" class="keyboardLetter"><p>X</p></div>
+                <div id="C" class="keyboardLetter"><p>C</p></div>
+                <div id="V" class="keyboardLetter"><p>V</p></div>
+                <div id="B" class="keyboardLetter"><p>B</p></div>
+                <div id="N" class="keyboardLetter"><p>N</p></div>
+                <div id="M" class="keyboardLetter"><p>M</p></div>
+                <!-- view-source:https://www.nytimes.com/games/wordle/index.html -->
+                <svg id="backspace" class="keyboardLetter" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="game-icon" data-testid="icon-backspace">
+                    <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+                </svg>
             </div>
         </div>
 
