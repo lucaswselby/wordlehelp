@@ -117,7 +117,7 @@ const keyboardPress = key => {
     
         // adds grays from Wordle letters
         for (let i = 0; i < currentIndex; i++) {
-            if (document.getElementsByClassName("wordleLetter")[i].style.backgroundColor == wordleGray) {
+            if (document.getElementsByClassName("wordleLetter")[i].style.backgroundColor == wordleGray && !yellow.includes(document.getElementsByClassName("wordleLetter")[i].innerHTML) && !greens.includes(document.getElementsByClassName("wordleLetter")[i].innerHTML)) {
                 grays.push(document.getElementsByClassName("wordleLetter")[i].innerHTML);
             }
         }
