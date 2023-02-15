@@ -33,7 +33,10 @@ const keyboardPress = key => {
     
                 // fills out yellow array
                 if (document.getElementsByClassName(index)[i].style.backgroundColor == wordleYellow && !yellow.includes(document.getElementsByClassName(index)[i].innerHTML)) {
-                    yellow.push(document.getElementsByClassName(index)[i].innerHTML);
+                    yellow.push({
+                        letter: document.getElementsByClassName(index)[i].innerHTML,
+                        index: letterIndeces.indexOf(index)
+                    });
                 }
             }
         });
@@ -97,10 +100,15 @@ const keyboardPress = key => {
             }
         }
     
-        // remove words without yellow letters
+        // remove words without yellow letters and with yellow letters in the wrong spot
         yellow.forEach(yel => {
             possibilities = possibilities.filter(possibility => {
-                return possibility.includes(yel);
+                for (let i = 0; i < letterIndeces.length; i++) {
+                    if (i === yel.index && possibility.charAt(i) == yel.letter) {
+                        return false;
+                    }
+                }
+                return possibility.includes(yel.letter);
             });
         });
     
@@ -117,7 +125,9 @@ const keyboardPress = key => {
     
         // adds grays from Wordle letters
         for (let i = 0; i < currentIndex; i++) {
-            if (document.getElementsByClassName("wordleLetter")[i].style.backgroundColor == wordleGray && !yellow.includes(document.getElementsByClassName("wordleLetter")[i].innerHTML) && !greens.includes(document.getElementsByClassName("wordleLetter")[i].innerHTML)) {
+            if (document.getElementsByClassName("wordleLetter")[i].style.backgroundColor == wordleGray && yellow.every((yel) => {
+                    return yel.letter != document.getElementsByClassName("wordleLetter")[i].innerHTML;
+                }) && !greens.includes(document.getElementsByClassName("wordleLetter")[i].innerHTML)) {
                 grays.push(document.getElementsByClassName("wordleLetter")[i].innerHTML);
             }
         }
