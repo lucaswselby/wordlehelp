@@ -114,9 +114,12 @@ h1 {
     width: 2.9em;
     vertical-align: middle;
 }
-.keyboardLetter:not(#backspace) {
-    border: 2px solid black;
-}
+    .keyboardLetter:hover {
+        background-color: lightgray;
+    }
+    .keyboardLetter:not(#backspace) {
+        border: 2px solid black;
+    }
 #enter {
     width: 3.4em;
 }
