@@ -12,6 +12,47 @@ for (let i = 0; i < letterIndeces.length * 5; i++) {
     document.getElementsByClassName("wordleLetter")[i].style.backgroundColor = wordleGray;
 }
 
+// updates the background colors of the keyboard letters to reflect the Wordle tiles
+const updateKeyboardColors = () => {
+
+    // finds all gray tiles and colors in the keyboard letters
+    let greens = [];
+    let yellows = [];
+    let remainingLetters = [...alphabet];
+    for (let i = 0; i < 5; i++) {
+        letterIndeces.forEach(index => {
+
+            // separates the greens and yellows from the grays
+            if (document.getElementsByClassName(index)[i].innerHTML && document.getElementsByClassName(index)[i].style.backgroundColor === wordleGreen) {
+                greens.push(document.getElementsByClassName(index)[i].innerHTML);
+            }
+            else if (document.getElementsByClassName(index)[i].innerHTML && document.getElementsByClassName(index)[i].style.backgroundColor === wordleYellow && !greens.includes(document.getElementsByClassName(index)[i].innerHTML)) {
+                yellows.push(document.getElementsByClassName(index)[i].innerHTML);
+            }
+
+            // changes the keyboard letters to gray
+            else if (document.getElementsByClassName(index)[i].innerHTML) {
+                document.getElementById(document.getElementsByClassName(index)[i].innerHTML).style.backgroundColor = wordleGray;
+            }
+
+            // removes typed letters from remainingLetters
+            remainingLetters = remainingLetters.filter(letter => letter !== document.getElementsByClassName(index)[i].innerHTML);
+        });
+    }
+
+    // changes the keyboard letters to green, yellow, and white
+    greens.forEach(green => {
+        document.getElementById(green).style.backgroundColor = wordleGreen;
+    });
+    yellows.forEach(yellow => {
+        document.getElementById(yellow).style.backgroundColor = wordleYellow;
+    });
+    remainingLetters.forEach(letter => {
+        document.getElementById(letter).style.backgroundColor = "rgb(255, 255, 255)";
+    });
+}
+
+// adds and removes letters from the Wordle tiles
 const keyboardPress = key => {
     if (key === "Backspace" && currentIndex > 0) {
         document.getElementsByClassName("wordleLetter")[--currentIndex].innerHTML = "";
@@ -155,6 +196,8 @@ const keyboardPress = key => {
         document.getElementsByClassName("wordleLetter")[currentIndex].innerHTML = key.toUpperCase();
         currentIndex++;
     }
+
+    updateKeyboardColors();
 }
 
 // backspace in the wordle answer focuses on the previous letter
@@ -185,13 +228,16 @@ for (let i = 0; i < letterIndeces.length * 5; i++) {
     document.getElementsByClassName("greenSquare")[i].onclick = () => {
         document.getElementsByClassName("wordleLetter")[i].style.backgroundColor = wordleGreen;
         document.getElementsByClassName("wordleLetterWrapper")[i].style.backgroundColor = wordleGreen;
+        updateKeyboardColors();
     };
     document.getElementsByClassName("yellowSquare")[i].onclick = () => {
         document.getElementsByClassName("wordleLetter")[i].style.backgroundColor = wordleYellow;
         document.getElementsByClassName("wordleLetterWrapper")[i].style.backgroundColor = wordleYellow;
+        updateKeyboardColors();
     };
     document.getElementsByClassName("graySquare")[i].onclick = () => {
         document.getElementsByClassName("wordleLetter")[i].style.backgroundColor = wordleGray;
         document.getElementsByClassName("wordleLetterWrapper")[i].style.backgroundColor = wordleGray;
+        updateKeyboardColors();
     };
 }
