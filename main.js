@@ -4,6 +4,7 @@ const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M
 const wordleGreen = "rgb(106, 170, 100)";
 const wordleYellow = "rgb(201, 180, 88)";
 const wordleGray = "rgb(120, 124, 126)";
+const backgroundColor = "rgb(255, 255, 255)";
 const letterIndeces = ["one", "two", "three", "four", "five"];
 let currentIndex = 0;
 
@@ -48,7 +49,7 @@ const updateKeyboardColors = () => {
         document.getElementById(yellow).style.backgroundColor = wordleYellow;
     });
     remainingLetters.forEach(letter => {
-        document.getElementById(letter).style.backgroundColor = "rgb(255, 255, 255)";
+        document.getElementById(letter).style.backgroundColor = backgroundColor;
     });
 }
 

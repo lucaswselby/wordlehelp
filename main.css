@@ -2,6 +2,7 @@
     --wordle-gray: rgb(120, 124, 126);
     --wordle-yellow: rgb(201, 180, 88);
     --wordle-green: rgb(106, 170, 100);
+    --background-color: rgb(255, 255, 255);
     --labelSquareLength: 4vw;
     --maxLabelSquareLength: 19px;
 }
@@ -113,9 +114,10 @@ h1 {
     height: 2.9em;
     width: 2.9em;
     vertical-align: middle;
+    background-color: var(--background-color);
 }
     .keyboardLetter:hover {
-        background-color: lightgray;
+        filter: brightness(80%);
     }
     .keyboardLetter:not(#backspace) {
         border: 2px solid black;
