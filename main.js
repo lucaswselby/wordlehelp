@@ -42,11 +42,11 @@ const updateKeyboardColors = () => {
     }
 
     // changes the keyboard letters to green, yellow, and white
-    greens.forEach(green => {
-        document.getElementById(green).style.backgroundColor = wordleGreen;
-    });
     yellows.forEach(yellow => {
         document.getElementById(yellow).style.backgroundColor = wordleYellow;
+    });
+    greens.forEach(green => {
+        document.getElementById(green).style.backgroundColor = wordleGreen;
     });
     remainingLetters.forEach(letter => {
         document.getElementById(letter).style.backgroundColor = backgroundColor;
