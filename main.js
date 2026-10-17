@@ -147,7 +147,7 @@ const keyboardPress = key => {
         yellow.forEach(yel => {
             possibilities = possibilities.filter(possibility => {
                 for (let i = 0; i < letterIndeces.length; i++) {
-                    if (i === yel.index && possibility.charAt(i) == yel.letter) {
+                    if (i === yel.index && possibility.charAt(i) === yel.letter) {
                         return false;
                     }
                 }
