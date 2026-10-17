@@ -115,9 +115,6 @@ h1 {
     vertical-align: middle;
     background-color: var(--background-color);
 }
-    .keyboardLetter:hover {
-        filter: brightness(80%);
-    }
     .keyboardLetter:not(#backspace) {
         border: 2px solid black;
     }
@@ -125,7 +122,7 @@ h1 {
     width: 3.4em;
 }
 
-@media only screen and (max-width: 600px) {
+@media (orientation: portrait) {
     input[type="text"] {
         font-size: 60px;
     }
@@ -138,5 +135,10 @@ h1 {
     }
     .wordleLetter {
         font-size: calc(var(--labelSquareLength) * 3);
+    }
+}
+@media (orientation: landscape) {
+    .keyboardLetter:hover {
+        filter: brightness(80%);
     }
 }
