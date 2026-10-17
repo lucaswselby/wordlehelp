@@ -146,24 +146,24 @@ const keyboardPress = key => {
         // remove words without yellow letters and with yellow letters in the wrong spot
         yellow.forEach(yel => {
             possibilities = possibilities.filter(possibility => {
+                if (!possibility.includes(yel.letter)) return false;
                 for (let i = 0; i < letterIndeces.length; i++) {
                     if (i === yel.index && possibility.charAt(i) === yel.letter) {
                         return false;
                     }
                 }
-                return possibility.includes(yel.letter);
+                return true;
             });
         });
     
         // removes words that aren't in Wordle
         possibilities = possibilities.filter(possibility => {
-            let remove = true;
-            words.forEach(word => {
-                if (word === possibility) {
-                    remove = false;
+            for (let i = 0; i < words.length; i++) {
+                if (words[i] === possibility) {
+                    return true;
                 }
-            });
-            return !remove;
+            }
+            return false;
         });
     
         // adds grays from Wordle letters
